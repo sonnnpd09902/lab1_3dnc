@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
             // Tạo Cube tại vị trí ngẫu nhiên
             float randomX = Random.Range(xMin, xMax);
             float randomY = Random.Range(yMin, yMax);
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     IEnumerator MoveCube(GameObject cube)
     {
         float elapsedTime = 0f;
-        float moveDuration = 5f; // Thời gian di chuyển về gốc
+        float moveDuration = 3f; // Thời gian di chuyển về gốc
         Vector3 startPosition = cube.transform.position;
 
         while (elapsedTime < moveDuration)
